@@ -1,0 +1,24 @@
+-create  a repository
+-Initialize the repository
+-node_modules, package.json, package-lock.json
+-Install express
+-Create a server
+-Listen to port 7777
+-Write request handlers for /test , /hello
+-Install nodemon and update scripts inside package.json
+-What are dependencies
+-What is the use of "-g" while npm install
+-Difference between caret and tilde ( ^ vs ~)
+
+-Initialize git
+-gitignore
+-create a remote repo on github
+-push all code to remote origin
+-play with routes and route extensions ex. /hello, /, hello/2
+-oredr of the routes matter a lot
+-how to install postman software
+-Install postman app and make a workspace/collection > test API call
+-Write logic to handle GET, POST,PATCH, DELETE API calls and test them  on postman
+-explore routing and use of ?, + ,(), * in the routes
+-Use of regex in orutes /a/ , /.*fly$/
+-Reading the query params in the routes
