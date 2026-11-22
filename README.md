@@ -1,6 +1,6 @@
-# ⚡ DevTinder — Professional Developer Matchmaking Platform
+# ⚡ DevSphere — Professional Developer Matchmaking Platform
 
-DevTinder is an elite, modern developer networking and matchmaking platform where software engineers can discover, match, and connect with peers based on tech-stack alignment, open-source interest, and project collaboration goals.
+DevSpehere is an elite, modern developer networking and matchmaking platform where software engineers can discover, match, and connect with peers based on tech-stack alignment, open-source interest, and project collaboration goals.
 
 ---
 
