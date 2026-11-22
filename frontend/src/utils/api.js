@@ -3,7 +3,7 @@ import axios from "axios";
 export const BASE_URL =
   typeof window !== "undefined" && window.location.port === "5173"
     ? "http://localhost:7777"
-    : "";
+    : "https://devsphere-backend-adr8.onrender.com";
 
 const api = axios.create({
   baseURL: BASE_URL,
