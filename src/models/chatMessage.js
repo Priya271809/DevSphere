@@ -1,0 +1,40 @@
+const mongoose = require("mongoose");
+
+const chatMessageSchema = new mongoose.Schema(
+  {
+    senderId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+      index: true,
+    },
+    receiverId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+      index: true,
+    },
+    text: {
+      type: String,
+      required: true,
+      trim: true,
+      maxlength: 2000,
+    },
+    isRead: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+// Compound index for fast chronological conversation queries between two users
+chatMessageSchema.index({ senderId: 1, receiverId: 1, createdAt: 1 });
+chatMessageSchema.index({ receiverId: 1, isRead: 1 });
+
+const ChatMessage =
+  mongoose.models.ChatMessage || mongoose.model("ChatMessage", chatMessageSchema);
+
+module.exports = ChatMessage;

@@ -1,11 +1,11 @@
 -create  a repository
 -Initialize the repository
--node_modules, package.json, package-lock.json
+-node_modules, package.json, package-lock.json 
 -Install express
 -Create a server
 -Listen to port 7777
 -Write request handlers for /test , /hello
--Install nodemon and update scripts inside package.json
+-Install nodemon and update. scripts inside package.json
 -What are dependencies
 -What is the use of "-g" while npm install
 -Difference between caret and tilde ( ^ vs ~)
@@ -43,3 +43,81 @@
 -Create /signup API to add data to database
 -Push some documents using API calls from postman
 -Error Handling using try , catch
+-JS vs JSON (difference)
+-Add the express.json middleware to your app
+-make your signup API dynamic to receive data from the end user
+-User.findOne with duplicate ids, which object returned 
+-API - Get user by email
+-API - feed API - GET/feed- get all the users from the databse
+-API - GET user by Id
+-How to Update API andd delete API (mongoose mthod->find)
+-Create a user API
+-Difference between PATCH and PUT
+-Explore the mongoose documentation for model Methods
+-what are options in a Model.findOneAndpdate method, explore more about it
+-API - update the user with email ID
+- Explore schematype options from the documentatin
+- add required, unique, lowercase, min, minlength, trim
+-Add default value
+-Create a custom validate function for gender
+-Improve the DB schema - PUT all appropriate validations on each field in Schema
+-Add timestams to the userSchema
+- Add API level validation on patch request and signup post api
+-DATA santizing - Add API validation for each field
+- visit website => npm validator
+- Install Validator
+- Explore validator library function Use validator funcs for password , email and photourl
+- NEVER TRUST req.body
+- validate data in signup API
+- Install bcrypt package
+- Create Password using bcrypt.hash and save the user is excrupted password
+- Create login API 
+- Compare passwords and throw errors if email or password is invalid
+
+-Install cookie-parser
+-just send a dummy cookie to user
+-create GET/profile API and check if you get the cookie back
+-install jsonwebtoken
+-IN login API, after email and password validation, create a JWT token and send it to user inside cookies.
+-read the cookies inside your profile API and find the logged in user.
+-userAuth Middleware.
+-Add the userAuth middleware in profile API and a new sendConnectionRequest API.
+-Set the expiry of JWT token and cookies to 7 days.
+-Create userSchema method to getJWT().
+-Create UserSchema method to comparepassword(passwordInputByUser).
+
+-Explore tinder APIs
+-Create a list all API you can think of in Dev Tinder.
+-Group multiple routes under respective routers.
+-Read documentation for express.Router
+-Create routes folder for managing auth, profile, request routers
+-create authRouter, profileRouter, requestRouter
+-Import these routers in app.js
+-Create POST /logout API
+-Create PATCH /profile/edit
+-Create PATCH /profile/password API => forgot password API
+-make you validate all data in every POST, PATCH apis
+- Read this article about compound indexes - https://www.mongodb.com/docs/manual
+- read more about indexes in mongodb
+- why do we need index in DB?
+- What is the advantages and disadvantages of creating?
+-create a connection Request Schema 
+-send connection request APi
+-proper validation of data
+-think about all corner cases
+-$or query and $and query in mongoose
+-schema.pre("save")function
+
+
+-Write code with proper validations for POST /request/review/:status/:requestId
+- thought process - POST vs GETs
+-read about ref and  populate 
+-Create GET /user/request/received with all the checks
+-logic for GET /feed API
+- explore the $nin, $and and other query operators
+
+/feed?page=1&limit=10 =>1-10 => .skip(0) & .limit(10)
+
+/feed?page=2&limit=10 => 11-20 => .skip(10) & .limit(10)
+
+/feed?page=3&limit=10 => 21-30 => .skip(20) & .limit(10)
